@@ -1,0 +1,47 @@
+<p>directives works!</p>
+
+<!-- PIPES -->
+<h1>{{state | uppercase}}</h1>
+<h1>{{city | lowercase}}</h1>
+<h6>{{now}}</h6>
+<h6>{{now | date}}</h6>
+<h6>{{now | date:'yyyy-MM-dd'}}</h6>
+<h6>{{now | date:'dd/MM/yy hh:mm:ss'}}</h6>
+
+
+<!-- if condition -->
+<h1 *ngIf="age>=18">Major</h1>
+<h1 *ngIf="age<18">Minor</h1>
+
+
+<!-- for loop -->
+<p *ngFor="let name of names">My name is {{name}}.</p>
+
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+</ol>
+
+<select name="" id="">
+    <option *ngFor="let name of names">{{name}}</option>
+</select>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>SNO</th>
+            <th>name</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let i = index">   
+            <td>{{i+1}}</td>
+            <td [ngStyle]="{ 'color': product.price>50 ? 'green' : 'red' }">{{product.name | uppercase}}</td>
+            <td [ngClass]="{ 't-red':product.price<50, 't-green':product.price>=50}">{{product.price}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div [ngClass]="{ 'visited': mail.isCompleted==true,'not-visited': mail.isCompleted==false  }" *ngFor="let mail of mails">
+    {{ mail.name }}
+</div>

@@ -1,0 +1,57 @@
+
+<label for="">Column:</label>
+<select [(ngModel)]="column">
+    <option>Vehicle</option>
+    <option>color</option>
+    <option>type</option>
+</select>
+
+<label for="">Order:</label>
+<select [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+
+
+<button class="btn btn-primary mr-5" (click)="SortVehicles()">sort</button>
+
+
+
+<input type="text" [(ngModel)]="term" (keypress)="filterVehicles()">
+<br><br>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>vehicle</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>cost</th>
+            <th>image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let vehicle of vehicles"> 
+        <td>{{vehicle.id}}</td>
+        <td>{{vehicle.Vehicle}}</td>
+        <td>{{vehicle.model}}</td>
+        <td>{{vehicle.type}}</td>
+        <td>{{vehicle.fuel}}</td>
+        <td>{{vehicle.color}}</td>
+        <td>{{vehicle.cost | price }}</td>
+        <td>
+            <img src="{{vehicle.image}}" alt="" width="100px" height="100px">
+        </td>
+        <td>
+            <button class="btn btn-info" routerLink="/dashboard/vehicle-details/{{vehicle.id}}">view</button>
+
+            <div *ngIf="role==='admin'">
+                <button class="btn btn-warning" routerLink="/dashboard/edit-vehicle/{{vehicle.id}}">edit</button>
+                <button class="btn btn-danger" (click)="deleteVehicle(vehicle.id)">delete</button>
+            </div>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,21 @@
+.t-red{
+    color: red;
+}
+.t-green{
+    color: green;
+}
+
+
+div{
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
+}
+
+.visited{
+    font-weight: 100;
+}
+
+.not-visited{
+    font-weight: 900;
+}

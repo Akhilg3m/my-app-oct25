@@ -1,27 +1,153 @@
-# MyApp
+Angular Setup:
+==============
+1) install nodes 
+	download and install
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+	Check: node -v
+               npm -v
 
-## Development server
+2) Installl angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+	npm i -g @angular/cli@15
 
-## Code scaffolding
+3) Create new project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+	ng new my-app
 
-## Build
+4) Start the server 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+	=> PowerShell permission to use it in VSCode
 
-## Running unit tests
+		1) open powershell as administator
+		2) run command:  set-executionPolicy unresticted
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+	ng serve
+	
 
-## Running end-to-end tests
+5) check output in browser
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+	localhost:4200
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Directives: Useful to alter the DOM
+===========
+1) Structural Directives: *ngFor, *ngIf
+2) Attribute Directives: ngClass, ngStyle
+
+Pipes: transform data to another format
+======
+
+
+RXJS:
+=====
+promise, observable, subject
+
+
+Steps:
+======
+1) Create VehicleComponent, Create VehicleService
+
+2) Import HttpClientModule
+
+3) Inject HttpClient service in VehicleService
+
+4) Request api with get method
+   it will return observable of data
+
+5) 
+    5.1) Inject VehicleService in VehicleComponent
+    5.2) Subscribe to observable to listen the data in component
+	5.3) Store the data in vatiable
+
+6) Display the data in html using *ngFor
+
+
+<!-- 
+All API calls:
+==============
+
+1) all         get     url  
+
+2) one         get     url/id
+
+3) filter      get     url?filter=red
+
+4) sorting     get     url?sortBy=color&order=asc/desc
+
+5) pagination  get     url?page=1&limit=10
+
+6) create      post    url,data
+
+6) delete      delete  url/id
+
+
+
+
+
+ Forms:
+ ======
+1) FormGorup
+2) Nested FormGroup
+3) FormArray
+4) Dynamic Forms
+5) FormValidations
+6) Custom Validators
+
+
+-->
+
+
+components  - Done
+services  - Done
+directives - Done
+pipes - Done
+data types - Done
+guards - Done (some other)
+validators - Done
+APIs - Done
+
+middleware - Done
+Authorization/Role Guard - Done
+modules - Partial
+
+apps
+libraries
+projects
+ 
+
+cli:
+=====
+1) create app
+	new new my-app
+2) create boiler plate code
+3) lint and test
+4) bundling
+
+
+www.facebook.com   192.3.4.22:8080
+
+
+1) minification
+
+<div>
+	<input>
+</div>
+
+<div><input></div>
+
+2) uglification
+
+getPagedVehicles(){}
+
+a1(){}
+
+3) Tree shaking
+-> service
+-> function
+-> compoent
+
+4) AOT vs JIT
+	AOT; ahead of time 
+	JIT: just in time
+

@@ -1,0 +1,27 @@
+
+<h1 *ngIf="num1==1">one</h1>
+<h1 *ngIf="num1==2">two</h1>
+<h1 *ngIf="num1==3">three</h1>
+<h1 *ngIf="num1==4">four</h1>
+
+
+<ng-container *ngTemplateOutlet="num1>0?wish1:wish2"></ng-container>
+<ng-template #wish1>hello</ng-template>
+<ng-template #wish2>hiiii</ng-template>
+
+
+<div class="calculator">
+  <h1>Calculator</h1>
+
+  <label for="">Number 1:</label>
+  <input type="number" [(ngModel)]="num1">
+  <br>
+
+  <label for="">Number 2:</label>
+  <input type="number" [(ngModel)]="num2">
+  <br>
+
+  <button (click)="sum()">Sum</button>
+
+  <h1>{{ result }}</h1>
+</div>

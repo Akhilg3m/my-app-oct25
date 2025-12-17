@@ -1,0 +1,65 @@
+<p>parent works!</p>
+<input type="text" [(ngModel)]="count">
+
+<app-child [count]="count" (countChange)="updateCount($event)">
+    <h1>Hello</h1>
+</app-child>
+
+<!-- 
+<button [disabled]="false" (click)="submit()">
+    submit
+</button>
+-->
+
+<!-- <textarea [rows]="10" [cols]="20" (keyup)="saveValue()">asdfasdf</textarea> -->
+<!-- 
+<app-textarea [max]="30" (valueChange)="saveValue()">
+    <p>Enter Paragraph</p>
+</app-textarea>
+-->
+
+<!-- <br>
+<app-textarea [max]="30" (valueChange)="catchMessage($event)">
+    <p>Enter Paragraph</p>
+</app-textarea> -->
+
+<app-highlight [color]="'red'">
+    <h1>Create User</h1>
+</app-highlight>
+
+
+
+<!-- 
+<app-rating 
+  [rating]="3" 
+  (ratingChanged)="updateRating($event)">
+</app-rating>
+
+<app-alert 
+  type="success" 
+  message="Profile updated!">
+</app-alert>
+
+<app-avatar 
+  [src]="user.picture" 
+  [size]="40" 
+  alt="User photo">
+</app-avatar>   
+
+<app-card>
+  <h3>Product Name</h3>
+  <p>Some description...</p>
+</app-card>
+
+<app-loader *ngIf="isLoading"></app-loader>
+
+<app-clock></app-clock>
+<app-stopwatch></app-stopwatch>
+
+-->
+
+
+flipkart => routing
+cart
+nav
+products/items

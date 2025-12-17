@@ -1,0 +1,79 @@
+/* Center the calculator */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Calculator card */
+.calculator {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  text-align: center;
+}
+
+/* Title */
+.calculator h1:first-of-type {
+  color: #4a4ae8;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Labels */
+.calculator label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0.8rem;
+  text-align: left;
+}
+
+/* Inputs */
+.calculator input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.calculator input[type="number"]:focus {
+  border-color: #4a4ae8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 74, 232, 0.4);
+}
+
+/* Button */
+.calculator button {
+  margin-top: 1rem;
+  background: #4a4ae8;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.calculator button:hover {
+  background: #3434c7;
+  transform: translateY(-2px);
+}
+
+/* Result */
+.calculator h1:last-of-type {
+  margin-top: 1.5rem;
+  color: #2ecc71;
+  font-size: 2rem;
+  font-weight: bold;
+}

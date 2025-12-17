@@ -1,0 +1,26 @@
+[
+  {
+    "Vehicle": "Maruti Charger",
+    "manufacturer": "Rolls Royce",
+    "model": "Corvette",
+    "type": "Minivan",
+    "fuel": "Gasoline",
+    "color": "ivory",
+    "image": "https://picsum.photos/seed/4713LG/983/2217",
+    "cost": "14.49",
+    "tyres": 61,
+    "id": "2"
+  },
+  {
+    "Vehicle": "Maserati Countach",
+    "manufacturer": "Skoda",
+    "model": "Model 3",
+    "type": "Wagon",
+    "fuel": "Gasoline",
+    "color": "green",
+    "image": "https://loremflickr.com/3519/1384?lock=6970154088178286",
+    "cost": "758.65",
+    "tyres": 5,
+    "id": "3"
+  }
+]
